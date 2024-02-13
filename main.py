@@ -2019,473 +2019,474 @@ with tab1:
                                             histogram(apply_image9,flag)
 
         with tab3:
-            if choice6 != "Select one":
-                
-                if choice4 != "Select one":
+            if choice7 != "Select one":
+                if choice6 != "Select one":
+                    
+                    if choice4 != "Select one":
 
-                    if choice2 != "Select one":
+                        if choice2 != "Select one":
 
-                        if choice2 != "No Edge Detection" and choice3 == "Select one":
-                            pass
+                            if choice2 != "No Edge Detection" and choice3 == "Select one":
+                                pass
 
-                        else:
-                                
-                            if on6:
+                            else:
+                                    
+                                if on6:
 
-                                # with st.expander("Mathematical Matrics"):
-                                    # Creating of Columns                       
-                                    # col1, col2, col3 = st.columns([1,1,1])
+                                    # with st.expander("Mathematical Matrics"):
+                                        # Creating of Columns                       
+                                        # col1, col2, col3 = st.columns([1,1,1])
 
-                                    if on7:
-                                        flag = 1
-                                    else:
-                                        flag = 0
+                                        if on7:
+                                            flag = 1
+                                        else:
+                                            flag = 0
 
-                                    with st.expander("Average Graph"):
-                                        col1, col2, col3 = st.columns([1,1,1])
-                                        with col1:
-                                            if flag == 1:
-                                                st.subheader("Average Line Chart")
-                                            if len(choice_img) >= 1:
-                                                avg_total = mean(apply_image1,flag,message1)
-                                                avg_total1 = avg_total
-                                            if len(choice_img) >= 4:
-                                                avg_total = mean(apply_image2,flag,message2)
-                                                avg_total2 = avg_total
-                                            if len(choice_img) >= 7:
-                                                avg_total = mean(apply_image3,flag,message3)
-                                                avg_total3 = avg_total
-
-                                        with col2:
-                                            if flag == 1:
-                                                st.subheader("Average Line Chart")
-                                            if len(choice_img) >= 2:
-                                                avg_total = mean(apply_image4,flag,message4)
-                                                avg_total4 = avg_total
-                                            if len(choice_img) >= 5:
-                                                avg_total = mean(apply_image5,flag,message5)
-                                                avg_total5 = avg_total
-                                            if len(choice_img) >= 8:
-                                                avg_total = mean(apply_image6,flag,message6)
-                                                avg_total6 = avg_total
-
-                                        with col3:
-                                            if flag == 1:
-                                                st.subheader("Average Line Chart")
-                                            if len(choice_img) >= 3:
-                                                avg_total = mean(apply_image7,flag,message7)
-                                                avg_total7 = avg_total
-                                            if len(choice_img) >= 6:
-                                                avg_total = mean(apply_image8,flag,message8)
-                                                avg_total8 = avg_total
-                                            if len(choice_img) >= 9:
-                                                avg_total = mean(apply_image9,flag,message9)
-                                                avg_total9 = avg_total
-
-                                    with st.expander("Standard Deviation Graph"):
-                                        col1, col2, col3 = st.columns([1,1,1])
-                                        with col1:
-                                            if flag == 1:
-                                                st.subheader("Standard Deviation Line Chart")
-                                            if len(choice_img) >= 1:
-                                                std_total = std(apply_image1,flag,message1)
-                                                std_total1 = std_total
-                                            if len(choice_img) >= 4:
-                                                std_total = std(apply_image2,flag,message2)
-                                                std_total2 = std_total
-                                            if len(choice_img) >= 7:
-                                                std_total = std(apply_image3,flag,message3)
-                                                std_total3 = std_total
-
-                                        with col2:
-                                            if flag == 1:
-                                                st.subheader("Standard Deviation Line Chart")
-                                            if len(choice_img) >= 2:
-                                                std_total = std(apply_image4,flag,message4)
-                                                std_total4 = std_total
-                                            if len(choice_img) >= 5:
-                                                std_total = std(apply_image5,flag,message5)
-                                                std_total5 = std_total
-                                            if len(choice_img) >= 8:
-                                                std_total = std(apply_image6,flag,message6)
-                                                std_total6 = std_total
-
-                                        with col3:
-                                            if flag == 1:
-                                                st.subheader("Standard Deviation Line Chart")
-                                            if len(choice_img) >= 3:
-                                                std_total = std(apply_image7,flag,message7)
-                                                std_total7 = std_total
-                                            if len(choice_img) >= 6:
-                                                std_total = std(apply_image8,flag,message8)
-                                                std_total8 = std_total
-                                            if len(choice_img) >= 9:
-                                                std_total = std(apply_image9,flag,message9)
-                                                std_total9 = std_total
-
-                                    with st.expander("Variance Graph"):
-                                        col1, col2, col3 = st.columns([1,1,1])
-                                        with col1:
-                                            if flag == 1:
-                                                st.subheader("Variation Line Chart")
-                                            if len(choice_img) >= 1:
-                                                var_total = var(apply_image1,flag,message1)
-                                                var_total1 = var_total
-                                            if len(choice_img) >= 4:
-                                                var_total = var(apply_image2,flag,message2)
-                                                var_total2 = var_total
-                                            if len(choice_img) >= 7:
-                                                var_total = var(apply_image3,flag,message3)
-                                                var_total3 = var_total
-                                        
-                                        with col2:
-                                            if flag == 1:
-                                                st.subheader("Variation Line Chart")
-                                            if len(choice_img) >= 2:
-                                                var_total = var(apply_image4,flag,message4)
-                                                var_total4 = var_total
-                                            if len(choice_img) >= 5:
-                                                var_total = var(apply_image5,flag,message5)
-                                                var_total5 = var_total
-                                            if len(choice_img) >= 8:
-                                                var_total = var(apply_image6,flag,message6)
-                                                var_total6 = var_total
-                                            
-                                        with col3:
-                                            if flag == 1:
-                                                st.subheader("Variation Line Chart")
-                                            if len(choice_img) >= 3:
-                                                var_total = var(apply_image7,flag,message7)
-                                                var_total7 = var_total
-                                            if len(choice_img) >= 6:
-                                                var_total = var(apply_image8,flag,message8)
-                                                var_total8 = var_total
-                                            if len(choice_img) >= 9:
-                                                var_total = var(apply_image9,flag,message9)
-                                                var_total9 = var_total
-
-                                    with st.expander("RMS Graph"):
-                                        col1, col2, col3 = st.columns([1,1,1])
-                                        with col1:
-                                            if flag == 1:
-                                                st.subheader("Root Mean Square Line Chart")
-                                            if len(choice_img) >= 1:
-                                                rms_total = rms(apply_image1,flag,message1)
-                                                rms_total1 = rms_total
-                                            if len(choice_img) >= 4:
-                                                rms_total = rms(apply_image2,flag,message2)
-                                                rms_total2 = rms_total
-                                            if len(choice_img) >= 7:
-                                                rms_total = rms(apply_image3,flag,message3)
-                                                rms_total3 = rms_total
-
-                                        with col2:
-                                            if flag == 1:
-                                                st.subheader("Root Mean Square Line Chart")
-                                            if len(choice_img) >= 2:
-                                                rms_total = rms(apply_image4,flag,message4)
-                                                rms_total4 = rms_total
-                                            if len(choice_img) >= 5:
-                                                rms_total = rms(apply_image5,flag,message5)
-                                                rms_total5 = rms_total
-                                            if len(choice_img) >= 8:
-                                                rms_total = rms(apply_image6,flag,message6)
-                                                rms_total6 = rms_total
-
-                                        with col3:
-                                            if flag == 1:
-                                                st.subheader("Root Mean Square Line Chart")
-                                            if len(choice_img) >= 3:
-                                                rms_total = rms(apply_image7,flag,message7)
-                                                rms_total7 = rms_total
-                                            if len(choice_img) >= 6:
-                                                rms_total = rms(apply_image8,flag,message8)
-                                                rms_total8 = rms_total
-                                            if len(choice_img) >= 9:
-                                                rms_total = rms(apply_image9,flag,message9)
-                                                rms_total9 = rms_total
-
-                                    with tab2:
-                                        with st.expander("Summary Table"):
+                                        with st.expander("Average Graph"):
                                             col1, col2, col3 = st.columns([1,1,1])
                                             with col1:
+                                                if flag == 1:
+                                                    st.subheader("Average Line Chart")
                                                 if len(choice_img) >= 1:
-                                                    skew_total = skew(apply_image1)
-                                                    skew_total1 = skew_total
+                                                    avg_total = mean(apply_image1,flag,message1)
+                                                    avg_total1 = avg_total
                                                 if len(choice_img) >= 4:
-                                                    skew_total = skew(apply_image2)
-                                                    skew_total2 = skew_total
+                                                    avg_total = mean(apply_image2,flag,message2)
+                                                    avg_total2 = avg_total
                                                 if len(choice_img) >= 7:
-                                                    skew_total = skew(apply_image3)
-                                                    skew_total3 = skew_total
-                                                    
-                                                if len(choice_img) >= 1:
-                                                    kur_total = kur(apply_image1)
-                                                    kur_total1 = kur_total
-                                                if len(choice_img) >= 4:
-                                                    kur_total = kur(apply_image2)
-                                                    kur_total2 = kur_total
-                                                if len(choice_img) >= 7:
-                                                    kur_total = kur(apply_image3)
-                                                    kur_total3 = kur_total
-
-                                                if len(choice_img) >= 1:
-                                                    entropy_total = entropy(apply_image1)
-                                                    entropy_total1 = entropy_total
-                                                if len(choice_img) >= 4:
-                                                    entropy_total = entropy(apply_image2)
-                                                    entropy_total2 = entropy_total
-                                                if len(choice_img) >= 7:
-                                                    entropy_total = entropy(apply_image3)
-                                                    entropy_total3 = entropy_total
-
-                                                if len(choice_img) >= 1:
-                                                    hist_total = histogram_mean(apply_image1)
-                                                    hist_total1 = hist_total
-                                                if len(choice_img) >= 4:
-                                                    hist_total = histogram_mean(apply_image2)
-                                                    hist_total2 = hist_total
-                                                if len(choice_img) >= 7:
-                                                    hist_total = histogram_mean(apply_image3)
-                                                    hist_total3 = hist_total
+                                                    avg_total = mean(apply_image3,flag,message3)
+                                                    avg_total3 = avg_total
 
                                             with col2:
-
+                                                if flag == 1:
+                                                    st.subheader("Average Line Chart")
                                                 if len(choice_img) >= 2:
-                                                    skew_total = skew(apply_image4)
-                                                    skew_total4 = skew_total
+                                                    avg_total = mean(apply_image4,flag,message4)
+                                                    avg_total4 = avg_total
                                                 if len(choice_img) >= 5:
-                                                    skew_total = skew(apply_image5)
-                                                    skew_total5 = skew_total
+                                                    avg_total = mean(apply_image5,flag,message5)
+                                                    avg_total5 = avg_total
                                                 if len(choice_img) >= 8:
-                                                    skew_total = skew(apply_image6)
-                                                    skew_total6 = skew_total
-
-                                                if len(choice_img) >= 2:
-                                                    kur_total = kur(apply_image4)
-                                                    kur_total4 = kur_total
-                                                if len(choice_img) >= 5:
-                                                    kur_total = kur(apply_image5)
-                                                    kur_total5 = kur_total
-                                                if len(choice_img) >= 8:
-                                                    kur_total = kur(apply_image6)
-                                                    kur_total6 = kur_total
-
-                                                if len(choice_img) >= 2:
-                                                    entropy_total = entropy(apply_image4)
-                                                    entropy_total4 = entropy_total
-                                                if len(choice_img) >= 5:
-                                                    entropy_total = entropy(apply_image5)
-                                                    entropy_total5 = entropy_total
-                                                if len(choice_img) >= 8:
-                                                    entropy_total = entropy(apply_image6)
-                                                    entropy_total6 = entropy_total
-
-                                                if len(choice_img) >= 2:
-                                                    hist_total = histogram_mean(apply_image4)
-                                                    hist_total4 = hist_total
-                                                if len(choice_img) >= 5:
-                                                    hist_total = histogram_mean(apply_image5)
-                                                    hist_total5 = hist_total
-                                                if len(choice_img) >= 8:
-                                                    hist_total = histogram_mean(apply_image6)
-                                                    hist_total6 = hist_total
+                                                    avg_total = mean(apply_image6,flag,message6)
+                                                    avg_total6 = avg_total
 
                                             with col3:
-
+                                                if flag == 1:
+                                                    st.subheader("Average Line Chart")
                                                 if len(choice_img) >= 3:
-                                                    skew_total = skew(apply_image7)
-                                                    skew_total7 = skew_total
+                                                    avg_total = mean(apply_image7,flag,message7)
+                                                    avg_total7 = avg_total
                                                 if len(choice_img) >= 6:
-                                                    skew_total = skew(apply_image8)
-                                                    skew_total8 = skew_total
+                                                    avg_total = mean(apply_image8,flag,message8)
+                                                    avg_total8 = avg_total
                                                 if len(choice_img) >= 9:
-                                                    skew_total = skew(apply_image9)
-                                                    skew_total9 = skew_total
-                                                    
+                                                    avg_total = mean(apply_image9,flag,message9)
+                                                    avg_total9 = avg_total
+
+                                        with st.expander("Standard Deviation Graph"):
+                                            col1, col2, col3 = st.columns([1,1,1])
+                                            with col1:
+                                                if flag == 1:
+                                                    st.subheader("Standard Deviation Line Chart")
+                                                if len(choice_img) >= 1:
+                                                    std_total = std(apply_image1,flag,message1)
+                                                    std_total1 = std_total
+                                                if len(choice_img) >= 4:
+                                                    std_total = std(apply_image2,flag,message2)
+                                                    std_total2 = std_total
+                                                if len(choice_img) >= 7:
+                                                    std_total = std(apply_image3,flag,message3)
+                                                    std_total3 = std_total
+
+                                            with col2:
+                                                if flag == 1:
+                                                    st.subheader("Standard Deviation Line Chart")
+                                                if len(choice_img) >= 2:
+                                                    std_total = std(apply_image4,flag,message4)
+                                                    std_total4 = std_total
+                                                if len(choice_img) >= 5:
+                                                    std_total = std(apply_image5,flag,message5)
+                                                    std_total5 = std_total
+                                                if len(choice_img) >= 8:
+                                                    std_total = std(apply_image6,flag,message6)
+                                                    std_total6 = std_total
+
+                                            with col3:
+                                                if flag == 1:
+                                                    st.subheader("Standard Deviation Line Chart")
                                                 if len(choice_img) >= 3:
-                                                    kur_total = kur(apply_image7)
-                                                    kur_total7 = kur_total
+                                                    std_total = std(apply_image7,flag,message7)
+                                                    std_total7 = std_total
                                                 if len(choice_img) >= 6:
-                                                    kur_total = kur(apply_image8)
-                                                    kur_total8 = kur_total
+                                                    std_total = std(apply_image8,flag,message8)
+                                                    std_total8 = std_total
                                                 if len(choice_img) >= 9:
-                                                    kur_total = kur(apply_image9)
-                                                    kur_total9 = kur_total
+                                                    std_total = std(apply_image9,flag,message9)
+                                                    std_total9 = std_total
 
+                                        with st.expander("Variance Graph"):
+                                            col1, col2, col3 = st.columns([1,1,1])
+                                            with col1:
+                                                if flag == 1:
+                                                    st.subheader("Variation Line Chart")
+                                                if len(choice_img) >= 1:
+                                                    var_total = var(apply_image1,flag,message1)
+                                                    var_total1 = var_total
+                                                if len(choice_img) >= 4:
+                                                    var_total = var(apply_image2,flag,message2)
+                                                    var_total2 = var_total
+                                                if len(choice_img) >= 7:
+                                                    var_total = var(apply_image3,flag,message3)
+                                                    var_total3 = var_total
+                                            
+                                            with col2:
+                                                if flag == 1:
+                                                    st.subheader("Variation Line Chart")
+                                                if len(choice_img) >= 2:
+                                                    var_total = var(apply_image4,flag,message4)
+                                                    var_total4 = var_total
+                                                if len(choice_img) >= 5:
+                                                    var_total = var(apply_image5,flag,message5)
+                                                    var_total5 = var_total
+                                                if len(choice_img) >= 8:
+                                                    var_total = var(apply_image6,flag,message6)
+                                                    var_total6 = var_total
+                                                
+                                            with col3:
+                                                if flag == 1:
+                                                    st.subheader("Variation Line Chart")
                                                 if len(choice_img) >= 3:
-                                                    entropy_total = entropy(apply_image7)
-                                                    entropy_total7 = entropy_total
+                                                    var_total = var(apply_image7,flag,message7)
+                                                    var_total7 = var_total
                                                 if len(choice_img) >= 6:
-                                                    entropy_total = entropy(apply_image8)
-                                                    entropy_total8 = entropy_total
+                                                    var_total = var(apply_image8,flag,message8)
+                                                    var_total8 = var_total
                                                 if len(choice_img) >= 9:
-                                                    entropy_total = entropy(apply_image9)
-                                                    entropy_total9 = entropy_total
+                                                    var_total = var(apply_image9,flag,message9)
+                                                    var_total9 = var_total
 
+                                        with st.expander("RMS Graph"):
+                                            col1, col2, col3 = st.columns([1,1,1])
+                                            with col1:
+                                                if flag == 1:
+                                                    st.subheader("Root Mean Square Line Chart")
+                                                if len(choice_img) >= 1:
+                                                    rms_total = rms(apply_image1,flag,message1)
+                                                    rms_total1 = rms_total
+                                                if len(choice_img) >= 4:
+                                                    rms_total = rms(apply_image2,flag,message2)
+                                                    rms_total2 = rms_total
+                                                if len(choice_img) >= 7:
+                                                    rms_total = rms(apply_image3,flag,message3)
+                                                    rms_total3 = rms_total
+
+                                            with col2:
+                                                if flag == 1:
+                                                    st.subheader("Root Mean Square Line Chart")
+                                                if len(choice_img) >= 2:
+                                                    rms_total = rms(apply_image4,flag,message4)
+                                                    rms_total4 = rms_total
+                                                if len(choice_img) >= 5:
+                                                    rms_total = rms(apply_image5,flag,message5)
+                                                    rms_total5 = rms_total
+                                                if len(choice_img) >= 8:
+                                                    rms_total = rms(apply_image6,flag,message6)
+                                                    rms_total6 = rms_total
+
+                                            with col3:
+                                                if flag == 1:
+                                                    st.subheader("Root Mean Square Line Chart")
                                                 if len(choice_img) >= 3:
-                                                    hist_total = histogram_mean(apply_image7)
-                                                    hist_total7 = hist_total
+                                                    rms_total = rms(apply_image7,flag,message7)
+                                                    rms_total7 = rms_total
                                                 if len(choice_img) >= 6:
-                                                    hist_total = histogram_mean(apply_image8)
-                                                    hist_total8 = hist_total
+                                                    rms_total = rms(apply_image8,flag,message8)
+                                                    rms_total8 = rms_total
                                                 if len(choice_img) >= 9:
-                                                    hist_total = histogram_mean(apply_image9)
-                                                    hist_total9 = hist_total
+                                                    rms_total = rms(apply_image9,flag,message9)
+                                                    rms_total9 = rms_total
 
-                                            if choice2 == "No Edge Detection" or (choice2 != "No Edge Detection" and choice3 != "Select one"):
-
-                                                    if on6:
-
-                                                        if len(choice_img) == 9:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2,message5,message8,message3,message6,message9]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3,avg_total6,avg_total9]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3,std_total6,std_total9]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3,var_total6,var_total9]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3,rms_total6,rms_total9]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3,skew_total6,skew_total9]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3,kur_total6,kur_total9]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3,entropy_total6,entropy_total9]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3,hist_total6,hist_total9]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 8:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2,message5,message8,message3,message6]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3,avg_total6]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3,std_total6]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3,var_total6]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3,rms_total6]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3,skew_total6]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3,kur_total6]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3,entropy_total6]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3,hist_total6]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 7:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2,message5,message8,message3]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 6:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2,message5,message8]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 5:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2,message5]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2,std_total5]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2,var_total5]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 4:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7,message2]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7,avg_total2]
-                                                            table_std = [std_total1,std_total4,std_total7,std_total2]
-                                                            table_var = [var_total1,var_total4,var_total7,var_total2]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7,rms_total2]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7,skew_total2]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7,kur_total2]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7,hist_total2]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
-
-                                                        elif len(choice_img) == 3:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4,message7]
-                                                            table_mean = [avg_total1,avg_total4,avg_total7]
-                                                            table_std = [std_total1,std_total4,std_total7]
-                                                            table_var = [var_total1,var_total4,var_total7]
-                                                            table_rms = [rms_total1,rms_total4,rms_total7]
-                                                            table_skew = [skew_total1,skew_total4,skew_total7]
-                                                            table_kur = [kur_total1,kur_total4,kur_total7]
-                                                            table_entropy = [entropy_total1,entropy_total4,entropy_total7]
-                                                            table_hist = [hist_total1,hist_total4,hist_total7]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
+                                        with tab2:
+                                            with st.expander("Summary Table"):
+                                                col1, col2, col3 = st.columns([1,1,1])
+                                                with col1:
+                                                    if len(choice_img) >= 1:
+                                                        skew_total = skew(apply_image1)
+                                                        skew_total1 = skew_total
+                                                    if len(choice_img) >= 4:
+                                                        skew_total = skew(apply_image2)
+                                                        skew_total2 = skew_total
+                                                    if len(choice_img) >= 7:
+                                                        skew_total = skew(apply_image3)
+                                                        skew_total3 = skew_total
                                                         
-                                                        elif len(choice_img) == 2:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1,message4]
-                                                            table_mean = [avg_total1,avg_total4]
-                                                            table_std = [std_total1,std_total4]
-                                                            table_var = [var_total1,var_total4]
-                                                            table_rms = [rms_total1,rms_total4]
-                                                            table_skew = [skew_total1,skew_total4]
-                                                            table_kur = [kur_total1,kur_total4]
-                                                            table_entropy = [entropy_total1,entropy_total4]
-                                                            table_hist = [hist_total1,hist_total4]
-                                                            
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
+                                                    if len(choice_img) >= 1:
+                                                        kur_total = kur(apply_image1)
+                                                        kur_total1 = kur_total
+                                                    if len(choice_img) >= 4:
+                                                        kur_total = kur(apply_image2)
+                                                        kur_total2 = kur_total
+                                                    if len(choice_img) >= 7:
+                                                        kur_total = kur(apply_image3)
+                                                        kur_total3 = kur_total
 
-                                                        elif len(choice_img) == 1:
-                                                            st.subheader("Summary Table")
-                                                            table_row = [message1]
-                                                            table_mean = [avg_total1]
-                                                            table_std = [std_total1]
-                                                            table_var = [var_total1]
-                                                            table_rms = [rms_total1]
-                                                            table_skew = [skew_total1]
-                                                            table_kur = [kur_total1]
-                                                            table_entropy = [entropy_total1]
-                                                            table_hist = [hist_total1]
+                                                    if len(choice_img) >= 1:
+                                                        entropy_total = entropy(apply_image1)
+                                                        entropy_total1 = entropy_total
+                                                    if len(choice_img) >= 4:
+                                                        entropy_total = entropy(apply_image2)
+                                                        entropy_total2 = entropy_total
+                                                    if len(choice_img) >= 7:
+                                                        entropy_total = entropy(apply_image3)
+                                                        entropy_total3 = entropy_total
+
+                                                    if len(choice_img) >= 1:
+                                                        hist_total = histogram_mean(apply_image1)
+                                                        hist_total1 = hist_total
+                                                    if len(choice_img) >= 4:
+                                                        hist_total = histogram_mean(apply_image2)
+                                                        hist_total2 = hist_total
+                                                    if len(choice_img) >= 7:
+                                                        hist_total = histogram_mean(apply_image3)
+                                                        hist_total3 = hist_total
+
+                                                with col2:
+
+                                                    if len(choice_img) >= 2:
+                                                        skew_total = skew(apply_image4)
+                                                        skew_total4 = skew_total
+                                                    if len(choice_img) >= 5:
+                                                        skew_total = skew(apply_image5)
+                                                        skew_total5 = skew_total
+                                                    if len(choice_img) >= 8:
+                                                        skew_total = skew(apply_image6)
+                                                        skew_total6 = skew_total
+
+                                                    if len(choice_img) >= 2:
+                                                        kur_total = kur(apply_image4)
+                                                        kur_total4 = kur_total
+                                                    if len(choice_img) >= 5:
+                                                        kur_total = kur(apply_image5)
+                                                        kur_total5 = kur_total
+                                                    if len(choice_img) >= 8:
+                                                        kur_total = kur(apply_image6)
+                                                        kur_total6 = kur_total
+
+                                                    if len(choice_img) >= 2:
+                                                        entropy_total = entropy(apply_image4)
+                                                        entropy_total4 = entropy_total
+                                                    if len(choice_img) >= 5:
+                                                        entropy_total = entropy(apply_image5)
+                                                        entropy_total5 = entropy_total
+                                                    if len(choice_img) >= 8:
+                                                        entropy_total = entropy(apply_image6)
+                                                        entropy_total6 = entropy_total
+
+                                                    if len(choice_img) >= 2:
+                                                        hist_total = histogram_mean(apply_image4)
+                                                        hist_total4 = hist_total
+                                                    if len(choice_img) >= 5:
+                                                        hist_total = histogram_mean(apply_image5)
+                                                        hist_total5 = hist_total
+                                                    if len(choice_img) >= 8:
+                                                        hist_total = histogram_mean(apply_image6)
+                                                        hist_total6 = hist_total
+
+                                                with col3:
+
+                                                    if len(choice_img) >= 3:
+                                                        skew_total = skew(apply_image7)
+                                                        skew_total7 = skew_total
+                                                    if len(choice_img) >= 6:
+                                                        skew_total = skew(apply_image8)
+                                                        skew_total8 = skew_total
+                                                    if len(choice_img) >= 9:
+                                                        skew_total = skew(apply_image9)
+                                                        skew_total9 = skew_total
+                                                        
+                                                    if len(choice_img) >= 3:
+                                                        kur_total = kur(apply_image7)
+                                                        kur_total7 = kur_total
+                                                    if len(choice_img) >= 6:
+                                                        kur_total = kur(apply_image8)
+                                                        kur_total8 = kur_total
+                                                    if len(choice_img) >= 9:
+                                                        kur_total = kur(apply_image9)
+                                                        kur_total9 = kur_total
+
+                                                    if len(choice_img) >= 3:
+                                                        entropy_total = entropy(apply_image7)
+                                                        entropy_total7 = entropy_total
+                                                    if len(choice_img) >= 6:
+                                                        entropy_total = entropy(apply_image8)
+                                                        entropy_total8 = entropy_total
+                                                    if len(choice_img) >= 9:
+                                                        entropy_total = entropy(apply_image9)
+                                                        entropy_total9 = entropy_total
+
+                                                    if len(choice_img) >= 3:
+                                                        hist_total = histogram_mean(apply_image7)
+                                                        hist_total7 = hist_total
+                                                    if len(choice_img) >= 6:
+                                                        hist_total = histogram_mean(apply_image8)
+                                                        hist_total8 = hist_total
+                                                    if len(choice_img) >= 9:
+                                                        hist_total = histogram_mean(apply_image9)
+                                                        hist_total9 = hist_total
+
+                                                if choice2 == "No Edge Detection" or (choice2 != "No Edge Detection" and choice3 != "Select one"):
+
+                                                        if on6:
+
+                                                            if len(choice_img) == 9:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2,message5,message8,message3,message6,message9]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3,avg_total6,avg_total9]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3,std_total6,std_total9]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3,var_total6,var_total9]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3,rms_total6,rms_total9]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3,skew_total6,skew_total9]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3,kur_total6,kur_total9]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3,entropy_total6,entropy_total9]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3,hist_total6,hist_total9]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 8:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2,message5,message8,message3,message6]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3,avg_total6]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3,std_total6]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3,var_total6]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3,rms_total6]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3,skew_total6]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3,kur_total6]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3,entropy_total6]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3,hist_total6]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 7:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2,message5,message8,message3]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8,var_total3]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8,rms_total3]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8,skew_total3]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8,kur_total3]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8,entropy_total3]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8,hist_total3]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 6:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2,message5,message8]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2,var_total5,var_total8]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5,rms_total8]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5,skew_total8]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5,kur_total8]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5,entropy_total8]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5,hist_total8]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 5:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2,message5]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2,std_total5]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2,var_total5]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2,rms_total5]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2,skew_total5]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2,kur_total5]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2,entropy_total5]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2,hist_total5]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 4:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7,message2]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7,avg_total2]
+                                                                table_std = [std_total1,std_total4,std_total7,std_total2]
+                                                                table_var = [var_total1,var_total4,var_total7,var_total2]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7,rms_total2]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7,skew_total2]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7,kur_total2]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7,entropy_total2]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7,hist_total2]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 3:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4,message7]
+                                                                table_mean = [avg_total1,avg_total4,avg_total7]
+                                                                table_std = [std_total1,std_total4,std_total7]
+                                                                table_var = [var_total1,var_total4,var_total7]
+                                                                table_rms = [rms_total1,rms_total4,rms_total7]
+                                                                table_skew = [skew_total1,skew_total4,skew_total7]
+                                                                table_kur = [kur_total1,kur_total4,kur_total7]
+                                                                table_entropy = [entropy_total1,entropy_total4,entropy_total7]
+                                                                table_hist = [hist_total1,hist_total4,hist_total7]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
                                                             
-                                                            # dictionary of lists 
-                                                            dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
-                                                            df = pd.DataFrame(dict)
-                                                            st.dataframe(df)
+                                                            elif len(choice_img) == 2:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1,message4]
+                                                                table_mean = [avg_total1,avg_total4]
+                                                                table_std = [std_total1,std_total4]
+                                                                table_var = [var_total1,var_total4]
+                                                                table_rms = [rms_total1,rms_total4]
+                                                                table_skew = [skew_total1,skew_total4]
+                                                                table_kur = [kur_total1,kur_total4]
+                                                                table_entropy = [entropy_total1,entropy_total4]
+                                                                table_hist = [hist_total1,hist_total4]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
+
+                                                            elif len(choice_img) == 1:
+                                                                st.subheader("Summary Table")
+                                                                table_row = [message1]
+                                                                table_mean = [avg_total1]
+                                                                table_std = [std_total1]
+                                                                table_var = [var_total1]
+                                                                table_rms = [rms_total1]
+                                                                table_skew = [skew_total1]
+                                                                table_kur = [kur_total1]
+                                                                table_entropy = [entropy_total1]
+                                                                table_hist = [hist_total1]
+                                                                
+                                                                # dictionary of lists 
+                                                                dict = {"Category": table_row, "Average": table_mean, "Standard Deviation": table_std, "Variance": table_var, "Root Mean Square": table_rms, "Skewness": table_skew, "Kurtosis": table_kur, "Entropy": table_entropy, "Histogram Mean": table_hist}
+                                                                df = pd.DataFrame(dict)
+                                                                st.dataframe(df)
