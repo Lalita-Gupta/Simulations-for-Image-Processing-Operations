@@ -602,7 +602,7 @@ st.title("Simulation for Image Processing Operations")
 # Sidebar
 with st.sidebar:
     # choice_img = st.selectbox("Image Set", ["Select one", "Set1", "Set2", "Set3", "Set4", "Set5", "Set6"])
-    choice_img = st.file_uploader("Input Images", type= ['bmp','jpg','jpeg','png'], accept_multiple_files=True)
+    choice_img = st.file_uploader("Input Images: MAX 9 IMAGES", type= ['bmp','jpg','jpeg','png'], accept_multiple_files=True)
 
     if len(choice_img) >= 1:
         on5 = st.toggle('Original Image Histogram')
@@ -679,16 +679,16 @@ with st.sidebar:
 
                         if choice2 == "No Edge Detection":
                             on4 = st.toggle('Edge Detection Histogram')
-                            on6 = st.toggle("Features")
+                            on6 = st.toggle("Features: Go to 'Summary Table' tab")
                             if on6:
-                                on7 = st.toggle("With graph")
+                                on7 = st.toggle("With graph: Go to 'Graph' tab")
                         else:
                             choice3 = st.selectbox("Filters", ["Select one", "No Filter", "Median", "Gaussian", "Bilateral", "Morphological", "Averaging"]) 
                             if choice3 != "Select one":
                                 on4 = st.toggle('Edge Detection Histogram')
-                                on6 = st.toggle("Features")
+                                on6 = st.toggle("Features: Go to 'Summary Table' tab")
                                 if on6:
-                                    on7 = st.toggle("With graph")
+                                    on7 = st.toggle("With graph: Go to 'Graph' tab")
                     
 tab1, tab2, tab3 = st.tabs(["Home", "Summary Table", "Graph"])
 # All Options 
