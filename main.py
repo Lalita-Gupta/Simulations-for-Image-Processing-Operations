@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st 
 
 with st.sidebar:
-    main_choice = st.selectbox("Image Processing Operations", ["Aim", "Theory", "Simulation", "Feedback"])
+    main_choice = st.selectbox("Image Processing Operations", ["Aim", "Theory", "Simulation", "Contributors", "References"])
 
 if main_choice == "Aim":
     st.title("Aim")
@@ -32,6 +32,8 @@ if main_choice == "Aim":
     st.markdown("- **Image Metrics:** Calculate various image metrics including mean, variance, standard deviation, root mean square, skewness, kurtosis, entropy, and histogram mean.")
 
 if main_choice == "Theory":
+    st.title("Theory")
+    st.divider()
     st.subheader("GrabCut Algorithm")
     st.write("The GrabCut algorithm is a versatile image segmentation method that employs graph cuts. By iteratively refining segmentation based on user-provided foreground and background markers, GrabCut optimizes a Markov Random Field model. The algorithm combines initial GrabCut labeling, Canny Edge Detection, and Gaussian Mixture Model to iteratively create a graph and minimize the total cut edge weights. This process continues until convergence, resulting in a finely segmented image, effectively distinguishing the object of interest from the background.")
 
@@ -94,7 +96,7 @@ if main_choice == "Simulation":
     def input(image, message):
         
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        st.subheader(message)
+        st.write(message)
         st.image(image, caption = message)
 
         return image
@@ -397,7 +399,7 @@ if main_choice == "Simulation":
 
         if flag == 1:
 
-            st.subheader(message)
+            st.write(message)
 
             st.write("Histogram of each channel")
             
@@ -430,7 +432,7 @@ if main_choice == "Simulation":
             st.line_chart(hist)
 
         else:
-            st.subheader(message)
+            st.write(message)
             
             hist = cv2.calcHist([image],[0],None,[256],[0,500])
             st.line_chart(hist)
@@ -503,7 +505,7 @@ if main_choice == "Simulation":
 
     def notransformation(image,message):
 
-        st.subheader(message)
+        st.write(message)
         st.image(image, caption = message)
 
         return image
@@ -522,7 +524,7 @@ if main_choice == "Simulation":
         return gamma_corrected
 
     def log(image, message):
-        st.subheader(message)
+        st.write(message)
         # Split the image into its color channels
         b, g, r = cv2.split(image)
 
@@ -545,7 +547,7 @@ if main_choice == "Simulation":
         return log_transformed_image
 
     def inverselog(image, message):
-        st.subheader(message)
+        st.write(message)
         # Split the original image into its color channels
         b, g, r = cv2.split(image)
 
@@ -578,21 +580,21 @@ if main_choice == "Simulation":
 
     def nocoloration(image, message):
 
-        st.subheader(message)
+        st.write(message)
         st.image(image, caption = message)
 
         return image
 
     def gray(image, message):
 
-        st.subheader(message)
+        st.write(message)
         gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
         st.image(gray_image, caption = message)
 
         return gray_image
 
     def hue(image, message):
-        st.subheader(message)
+        st.write(message)
         # Convert BGR image to HSV
         hsv_image = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
 
@@ -605,42 +607,42 @@ if main_choice == "Simulation":
         return hue_image
 
     def pseudo_spring(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_spring_image = cv2.applyColorMap(image, cv2.COLORMAP_SPRING)
         st.image(pseudo_spring_image, caption = message)
 
         return pseudo_spring_image
 
     def pseudo_hot(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_hot_image = cv2.applyColorMap(image, cv2.COLORMAP_HOT)
         st.image(pseudo_hot_image, caption = message)
 
         return pseudo_hot_image
 
     def pseudo_cool(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_cool_image = cv2.applyColorMap(image, cv2.COLORMAP_COOL)
         st.image(pseudo_cool_image, caption = message)
 
         return pseudo_cool_image
 
     def pseudo_rainbow(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_rainbow_image = cv2.applyColorMap(image, cv2.COLORMAP_RAINBOW)
         st.image(pseudo_rainbow_image, caption = message)
 
         return pseudo_rainbow_image
 
     def pseudo_hsv(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_hsv_image = cv2.applyColorMap(image, cv2.COLORMAP_HSV)
         st.image(pseudo_hsv_image, caption = message)
 
         return pseudo_hsv_image
 
     def pseudo_jet(image,message):
-        st.subheader(message)
+        st.write(message)
         pseudo_jet_image = cv2.applyColorMap(image, cv2.COLORMAP_JET)
         st.image(pseudo_jet_image, caption = message)
 
@@ -651,7 +653,7 @@ if main_choice == "Simulation":
 
     def noedge(image, message):
 
-        st.subheader(message)
+        st.write(message)
         st.image(image, caption = message)
         return image
 
@@ -662,13 +664,13 @@ if main_choice == "Simulation":
         return edges
 
     def otsu(image,message):
-        st.subheader(message)
+        st.write(message)
         edges = cv2.adaptiveThreshold(image,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
         st.image(edges, caption = message)
         return edges
 
     def prewitt(image,message):
-        st.subheader(message)
+        st.write(message)
         kernelx = np.array([[1,1,1],[0,0,0],[-1,-1,-1]])
         kernely = np.array([[-1,0,1],[-1,0,1],[-1,0,1]])
         img_prewittx = cv2.filter2D(image, -1, kernelx)
@@ -678,7 +680,7 @@ if main_choice == "Simulation":
         return edges
 
     def robert(image,message):
-        st.subheader(message)
+        st.write(message)
         kernelx = np.array([[1, 0], [0, -1]])
         kernely = np.array([[0, 1], [-1, 0]])
         img_robertx = cv2.filter2D(image, -1, kernelx)
@@ -691,7 +693,7 @@ if main_choice == "Simulation":
     # **************************************************************************************************************************************************************
 
     # Title
-    st.title("Simulation for Image Processing Operations")
+    st.title("Simulation for Image Processing and Analysis")
 
     # Sidebar
     with st.sidebar:
@@ -743,7 +745,7 @@ if main_choice == "Simulation":
                     # elif len(choice_img) >= 1:
                     #     choice8 = st.selectbox("Choose GrabCut Parameters", ["Select one", "Image1"])
 
-                    on1 = st.toggle('Original Object Detected Image Histogram')
+                    on1 = st.toggle('Object Detected Image Histogram')
                 choice6 = st.selectbox("Image Transformation", ["Select one", "No Transformation", "Gamma Transformation", "Log Transformation", "Inverse Log Transformation"])
 
                 if choice6 != "Select one":
@@ -809,11 +811,6 @@ if main_choice == "Simulation":
             message9 = "Image 9"
 
             with st.expander("Original Image"):
-
-                col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-
-                with inter_cols_pace:
-                    st.header("Original Image")
                 
                 col1, col2, col3 = st.columns([1,1,1])
                 with col1:
@@ -879,11 +876,6 @@ if main_choice == "Simulation":
             if on5:
                     
                 with st.expander("Original Image Histogram"):
-    
-                    col1, inter_cols_pace, col2 = st.columns((2, 5, 2))
-
-                    with inter_cols_pace:
-                        st.header("Original Image Histogram")
                     
                     col1, col2, col3 = st.columns([1,1,1])
 
@@ -917,18 +909,13 @@ if main_choice == "Simulation":
                 if choice7 == "Object Without Background":
 
                     with st.expander("Object Image"):
-                                            
-                            col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-
-                            with inter_cols_pace:
-                                st.header("Object Image")
 
                             col1, col2, col3 = st.columns([1,1,1])
                             with col1:
 
                                 if len(choice_img) >= 1:
 
-                                    st.subheader(message1)
+                                    st.write(message1)
 
                                     cut1 = original_image1
                                     x1 = st.slider("Horizontal top-left corner:",0,original_image1.shape[0], value = 0)
@@ -938,7 +925,7 @@ if main_choice == "Simulation":
                                     img1 = object(cut1,x1,y1,w1,h1,message1)
 
                                 if len(choice_img) >= 4:
-                                    st.subheader(message2)
+                                    st.write(message2)
                                     cut2 = original_image2
                                     x2 = st.slider("Horizontal top-left corner:",0,original_image2.shape[0], value = 0)
                                     y2 = st.slider("Vertical top-left corner:",0,original_image2.shape[1], value = 0)
@@ -947,7 +934,7 @@ if main_choice == "Simulation":
                                     img2 = object(cut2,x2, y2, w2, h2,message2)
                                 
                                 if len(choice_img) >= 7:
-                                    st.subheader(message3)
+                                    st.write(message3)
                                     cut3 = original_image3
                                     x3 = st.slider("Horizontal top-left corner:",0,original_image3.shape[0], value = 0)
                                     y3 = st.slider("Vertical top-left corner:",0,original_image3.shape[1], value = 0)
@@ -958,7 +945,7 @@ if main_choice == "Simulation":
                             with col2:
 
                                 if len(choice_img) >= 2:
-                                    st.subheader(message4)
+                                    st.write(message4)
                                     cut4 = original_image4
                                     x4 = st.slider("Horizontal top-left corner:",0,original_image4.shape[0], value = 0)
                                     y4 = st.slider("Vertical top-left corner:",0,original_image4.shape[1], value = 0)
@@ -967,7 +954,7 @@ if main_choice == "Simulation":
                                     img4 = object(cut4,x4, y4, w4, h4,message4)
 
                                 if len(choice_img) >= 5:
-                                    st.subheader(message5)
+                                    st.write(message5)
                                     cut5 = original_image5
                                     x5 = st.slider("Horizontal top-left corner:",0,original_image5.shape[0], value = 0)
                                     y5 = st.slider("Vertical top-left corner:",0,original_image5.shape[1], value = 0)
@@ -976,7 +963,7 @@ if main_choice == "Simulation":
                                     img5 = object(cut5,x5, y5, w5, h5,message5)
 
                                 if len(choice_img) >= 8:
-                                    st.subheader(message6)
+                                    st.write(message6)
                                     cut6 = original_image6
                                     x6 = st.slider("Horizontal top-left corner:",0,original_image6.shape[0], value = 0)
                                     y6 = st.slider("Vertical top-left corner:",0,original_image6.shape[1], value = 0)
@@ -987,7 +974,7 @@ if main_choice == "Simulation":
                             with col3:
 
                                 if len(choice_img) >= 3:
-                                    st.subheader(message7)
+                                    st.write(message7)
                                     cut7 = original_image7
                                     x7 = st.slider("Horizontal top-left corner:",0,original_image7.shape[0], value = 0)
                                     y7 = st.slider("Vertical top-left corner:",0,original_image7.shape[1], value = 0)
@@ -996,7 +983,7 @@ if main_choice == "Simulation":
                                     img7 = object(cut7,x7, y7, w7, h7,message7)
 
                                 if len(choice_img) >= 6:
-                                    st.subheader(message8)
+                                    st.write(message8)
                                     cut8 = original_image8
                                     x8 = st.slider("Horizontal top-left corner:",0,original_image8.shape[0], value = 0)
                                     y8 = st.slider("Vertical top-left corner:",0,original_image8.shape[1], value = 0)
@@ -1005,7 +992,7 @@ if main_choice == "Simulation":
                                     img8 = object(cut8,x8, y8, w8, h8,message8)
 
                                 if len(choice_img) >= 9:
-                                    st.subheader(message9)
+                                    st.write(message9)
                                     cut9 = original_image9
                                     x9 = st.slider("Horizontal top-left corner:",0,original_image9.shape[0], value = 0)
                                     y9 = st.slider("Vertical top-left corner:",0,original_image9.shape[1], value = 0)
@@ -1015,11 +1002,6 @@ if main_choice == "Simulation":
 
                     if on1:
                         with st.expander("Object Image Histogram"):
-    
-                            col1, inter_cols_pace, col2 = st.columns((2, 5, 2))
-
-                            with inter_cols_pace:
-                                st.header("Object Image Histogram")
                             
                             col1, col2, col3 = st.columns([1,1,1])
 
@@ -1053,11 +1035,8 @@ if main_choice == "Simulation":
                         # **************************************************************************************************************************************************************
 
                         if choice6 == "No Transformation":
-                            
-                            col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
-                            with inter_cols_pace:
-                                st.header("No Transformation")
 
+                            st.write("No Transformation")
                             col1, col2, col3 = st.columns([1,1,1])
 
                             with col1:
@@ -1105,28 +1084,24 @@ if main_choice == "Simulation":
 
                         if choice6 == "Gamma Transformation":
 
-                            col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-                            with inter_cols_pace:
-                                st.header("Gamma Transformation")
-
                             col1, col2, col3 = st.columns([1,1,1])
 
                             with col1:
 
                                 if len(choice_img) >= 1:
-                                    st.subheader(message1)
+                                    st.write(message1)
                                     gamma_value1 = st.slider("Gamma Value of Image 1:",0.0,20.0, value = 0.1)
                                     gamma_corrected1 = gamma(img1, gamma_value1, message1)
                                     transformed_image1 = gamma_corrected1
 
                                 if len(choice_img) >= 4:
-                                    st.subheader(message2)
+                                    st.write(message2)
                                     gamma_value2 = st.slider("Gamma Value of Image 4:",0.0,20.0, value = 0.1)
                                     gamma_corrected2 = gamma(img2, gamma_value2, message2)
                                     transformed_image2 = gamma_corrected2
 
                                 if len(choice_img) >= 7:
-                                    st.subheader(message3)
+                                    st.write(message3)
                                     gamma_value3 = st.slider("Gamma Value of Image 7:",0.0,20.0, value = 0.1)
                                     gamma_corrected3 = gamma(img3, gamma_value3, message3)
                                     transformed_image3 = gamma_corrected3
@@ -1134,19 +1109,19 @@ if main_choice == "Simulation":
                             with col2:
 
                                 if len(choice_img) >= 2:
-                                    st.subheader(message4)
+                                    st.write(message4)
                                     gamma_value4 = st.slider("Gamma Value of Image 2:",0.0,20.0, value = 0.1)
                                     gamma_corrected4 = gamma(img4, gamma_value4, message4)
                                     transformed_image4 = gamma_corrected4
 
                                 if len(choice_img) >= 5:
-                                    st.subheader(message5)
+                                    st.write(message5)
                                     gamma_value5 = st.slider("Gamma Value of Image 5:",0.0,20.0, value = 0.1)
                                     gamma_corrected5 = gamma(img5, gamma_value5, message5)
                                     transformed_image5 = gamma_corrected5
 
                                 if len(choice_img) >= 8:
-                                    st.subheader(message6)
+                                    st.write(message6)
                                     gamma_value6 = st.slider("Gamma Value of Image 8:",0.0,20.0, value = 0.1)
                                     gamma_corrected6 = gamma(img6, gamma_value6, message6)
                                     transformed_image6 = gamma_corrected6
@@ -1155,28 +1130,24 @@ if main_choice == "Simulation":
                             with col3:
 
                                 if len(choice_img) >= 3:
-                                    st.subheader(message7)
+                                    st.write(message7)
                                     gamma_value7 = st.slider("Gamma Value of Image 3:",0.0,20.0, value = 0.1)
                                     gamma_corrected7 = gamma(img7, gamma_value7, message7)
                                     transformed_image7 = gamma_corrected7
                                     
                                 if len(choice_img) >= 6:
-                                    st.subheader(message8)
+                                    st.write(message8)
                                     gamma_value8 = st.slider("Gamma Value of Image 6:",0.0,20.0, value = 0.1)
                                     gamma_corrected8 = gamma(img8, gamma_value8, message8)
                                     transformed_image8 = gamma_corrected8
                                     
                                 if len(choice_img) >= 9:
-                                    st.subheader(message9)
+                                    st.write(message9)
                                     gamma_value9 = st.slider("Gamma Value of Image 9:",0.0,20.0, value = 0.1)
                                     gamma_corrected9 = gamma(img9, gamma_value9, message9)
                                     transformed_image9 = gamma_corrected9
                                                 
                         if choice6 == "Log Transformation":
-
-                            col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
-                            with inter_cols_pace:
-                                st.header("Log Transformation")
 
                             col1, col2, col3 = st.columns([1,1,1])
 
@@ -1226,10 +1197,6 @@ if main_choice == "Simulation":
                                     transformed_image9 = log_transformed_image9
                                 
                         if choice6 == "Inverse Log Transformation":
-
-                            col1, inter_cols_pace, col2 = st.columns((2, 7, 2))
-                            with inter_cols_pace:
-                                st.header("Inverse Log Transformation")
 
                             col1, col2, col3 = st.columns([1,1,1])
                             
@@ -1283,11 +1250,6 @@ if main_choice == "Simulation":
                     if on2:
 
                         with st.expander("Image Transformation Histogram"):
-    
-                            col1, inter_cols_pace, col2 = st.columns((2, 8, 2))
-
-                            with inter_cols_pace:
-                                st.header("Image Transformation Histogram")
                             
                             col1, col2, col3 = st.columns([1,1,1])
                             with col1:
@@ -1323,9 +1285,7 @@ if main_choice == "Simulation":
 
                             if choice4 == "No Coloration Image":
 
-                                col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-                                with inter_cols_pace:
-                                    st.header("No Coloration")
+                                st.write("No Coloration")
 
                                 col1, col2, col3 = st.columns([1,1,1])
 
@@ -1375,9 +1335,7 @@ if main_choice == "Simulation":
                                     
                             if choice4 == "Gray Coloration":
 
-                                col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-                                with inter_cols_pace:
-                                    st.header("Gray Coloration")
+                                st.write("Gray Coloration")
 
                                 col1, col2, col3 = st.columns([1,1,1])
 
@@ -1430,9 +1388,7 @@ if main_choice == "Simulation":
 
                             if choice4 == "HUE Coloration":
 
-                                col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-                                with inter_cols_pace:
-                                    st.header("HUE Coloration")
+                                st.write("HUE Coloration")
 
                                 col1, col2, col3 = st.columns([1,1,1])
                                     
@@ -1492,9 +1448,7 @@ if main_choice == "Simulation":
 
                                     if choice5 == "Spring":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 5, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo Spring Coloration")
+                                        st.write("Pseudo Spring Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
 
@@ -1547,9 +1501,7 @@ if main_choice == "Simulation":
                                             
                                     if choice5 == "Hot":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo Hot Coloration")
+                                        st.write("Pseudo Hot Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
 
@@ -1602,9 +1554,7 @@ if main_choice == "Simulation":
                                             
                                     if choice5 == "Cool":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo Cool Coloration")
+                                        st.write("Pseudo Cool Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
 
@@ -1657,9 +1607,7 @@ if main_choice == "Simulation":
                                             
                                     if choice5 == "Rainbow":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 6, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo Rainbow Coloration")
+                                        st.write("Pseudo Rainbow Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
 
@@ -1712,9 +1660,7 @@ if main_choice == "Simulation":
                                             
                                     if choice5 == "HSV":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo HSV Coloration")
+                                        st.write("Pseudo HSV Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
                                         
@@ -1767,9 +1713,7 @@ if main_choice == "Simulation":
                                             
                                     if choice5 == "JET":
 
-                                        col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-                                        with inter_cols_pace:
-                                            st.header("Pseudo JET Coloration")
+                                        st.write("Pseudo JET Coloration")
 
                                         col1, col2, col3 = st.columns([1,1,1])
 
@@ -1827,11 +1771,6 @@ if main_choice == "Simulation":
                             
                             if on3:
                                 with st.expander("Image Coloration Histogram"):
-            
-                                    col1, inter_cols_pace, col2 = st.columns((2, 7, 2))
-
-                                    with inter_cols_pace:
-                                        st.header("Image Coloration Histogram")
                                     
                                     col1, col2, col3 = st.columns([1,1,1])
                                     
@@ -1876,10 +1815,8 @@ if main_choice == "Simulation":
                                 if choice2 == "No Edge Detection":
 
                                     with st.expander("Edge Detection"):
-                                        col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
 
-                                        with inter_cols_pace:
-                                            st.header("No Edge Detection")
+                                        st.write("No Edge Detection")
                         
                                         col1, col2, col3 = st.columns([1,1,1])
                                         with col1:
@@ -2064,68 +2001,62 @@ if main_choice == "Simulation":
                                                 
                                             if choice2 == "Canny Edge Detection":
 
-                                                col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-
-                                                with inter_cols_pace:
-                                                    st.header("Canny Edge Detection")
+                                                st.write("Canny Edge Detection")
                                 
                                                 col1, col2, col3 = st.columns([1,1,1])
                                                 
                                                 with col1:
                                                     if len(choice_img) >= 1:
-                                                        st.subheader(message1)
+                                                        st.write(message1)
                                                         lower1 = st.slider("Lower Threshold Value of Image 1:",-800,800, value = 10)
                                                         upper1 = st.slider("Upper Threshold Value of Image 1:",-800,800, value = 250)
                                                         apply_image1 = canny(image_result1,lower1,upper1,message1)
                                                     if len(choice_img) >= 4:
-                                                        st.subheader(message2)
+                                                        st.write(message2)
                                                         lower2 = st.slider("Lower Threshold Value of Image 4:",-800,800, value = 10)
                                                         upper2 = st.slider("Upper Threshold Value of Image 4:",-800,800, value = 250)
                                                         apply_image2 = canny(image_result2,lower2,upper2,message2)
                                                     if len(choice_img) >= 7:
-                                                        st.subheader(message3)
+                                                        st.write(message3)
                                                         lower3 = st.slider("Lower Threshold Value of Image 7:",-800,800, value = 10)
                                                         upper3 = st.slider("Upper Threshold Value of Image 7:",-800,800, value = 250)
                                                         apply_image3 = canny(image_result3,lower3,upper3,message3)
                                                 with col2:
                                                     if len(choice_img) >= 2:
-                                                        st.subheader(message4)
+                                                        st.write(message4)
                                                         lower4 = st.slider("Lower Threshold Value of Image 2:",-800,800, value = 10)
                                                         upper4 = st.slider("Upper Threshold Value of Image 2:",-800,800, value = 250)
                                                         apply_image4 = canny(image_result4,lower4,upper4,message4)
                                                     if len(choice_img) >= 5:
-                                                        st.subheader(message5)
+                                                        st.write(message5)
                                                         lower5 = st.slider("Lower Threshold Value of Image 5:",-800,800, value = 10)
                                                         upper5 = st.slider("Upper Threshold Value of Image 5:",-800,800, value = 250)
                                                         apply_image5 = canny(image_result5,lower5,upper5,message5)
                                                     if len(choice_img) >= 8:
-                                                        st.subheader(message6)
+                                                        st.write(message6)
                                                         lower6 = st.slider("Lower Threshold Value of Image 8:",-800,800, value = 10)
                                                         upper6 = st.slider("Upper Threshold Value of Image 8:",-800,800, value = 250)
                                                         apply_image6 = canny(image_result6,lower6,upper6,message6)
                                                 with col3:
                                                     if len(choice_img) >= 3:
-                                                        st.subheader(message7)
+                                                        st.write(message7)
                                                         lower7 = st.slider("Lower Threshold Value of Image 3:",-800,800, value = 10)
                                                         upper7 = st.slider("Upper Threshold Value of Image 3:",-800,800, value = 250)
                                                         apply_image7 = canny(image_result7,lower7,upper7,message7)
                                                     if len(choice_img) >= 6:
-                                                        st.subheader(message8)
+                                                        st.write(message8)
                                                         lower8 = st.slider("Lower Threshold Value of Image 6:",-800,800, value = 10)
                                                         upper8 = st.slider("Upper Threshold Value of Image 6:",-800,800, value = 250)
                                                         apply_image8 = canny(image_result8,lower8,upper8,message8)
                                                     if len(choice_img) >= 9:
-                                                        st.subheader(message9)
+                                                        st.write(message9)
                                                         lower9 = st.slider("Lower Threshold Value of Image 9:",-800,800, value = 10)
                                                         upper9 = st.slider("Upper Threshold Value of Image 9:",-800,800, value = 250)
                                                         apply_image9 = canny(image_result9,lower9,upper9,message9)
 
                                             if choice2 == "Otsu Edge Detection":
 
-                                                col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
-
-                                                with inter_cols_pace:
-                                                    st.header("Otsu Edge Detection")
+                                                st.write("Otsu Edge Detection")
                                 
                                                 col1, col2, col3 = st.columns([1,1,1])
 
@@ -2153,10 +2084,7 @@ if main_choice == "Simulation":
 
                                             if choice2 == "Prewitt Edge Detection":
 
-                                                col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-
-                                                with inter_cols_pace:
-                                                    st.header("Prewitt Edge Detection")
+                                                st.write("Prewitt Edge Detection")
                                 
                                                 col1, col2, col3 = st.columns([1,1,1])
 
@@ -2184,10 +2112,7 @@ if main_choice == "Simulation":
 
                                             if choice2 == "Robert Edge Detection":
 
-                                                col1, inter_cols_pace, col2 = st.columns((2, 4, 2))
-
-                                                with inter_cols_pace:
-                                                    st.header("Robert Edge Detection")
+                                                st.write("Robert Edge Detection")
                                 
                                                 col1, col2, col3 = st.columns([1,1,1])
 
@@ -2220,11 +2145,6 @@ if main_choice == "Simulation":
                                     if on4:
 
                                         with st.expander("Edge Detection Histogram"):
-            
-                                            col1, inter_cols_pace, col2 = st.columns((2, 5, 2))
-
-                                            with inter_cols_pace:
-                                                st.header("Edge Detection Histogram")
                                             
                                             col1, col2, col3 = st.columns([1,1,1])
                                         
@@ -2256,7 +2176,9 @@ if main_choice == "Simulation":
                                                     histogram(apply_image9,flag,message9)
 
             with tab3:
+
                 if choice7 != "Select one":
+
                     if choice6 != "Select one":
                         
                         if choice4 != "Select one":
@@ -2286,10 +2208,6 @@ if main_choice == "Simulation":
 
                                                 with st.expander("Average Line Graph"):
 
-                                                    col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
-
-                                                    with inter_cols_pace:
-                                                        st.header("Average Line Graph")
                                                     
                                                     col1, col2, col3 = st.columns([1,1,1])
                                                     with col1:
@@ -2327,11 +2245,6 @@ if main_choice == "Simulation":
 
                                                 with st.expander("Standard Deviation Line Graph"):
 
-                                                    col1, inter_cols_pace, col2 = st.columns((2, 7, 2))
-
-                                                    with inter_cols_pace:
-                                                        st.header("Standard Deviation Line Graph")
-
                                                     col1, col2, col3 = st.columns([1,1,1])
                                                     with col1:
                                                         if len(choice_img) >= 1:
@@ -2368,11 +2281,6 @@ if main_choice == "Simulation":
 
                                                 with st.expander("Variance Line Graph"):
 
-                                                    col1, inter_cols_pace, col2 = st.columns((2, 3, 2))
-
-                                                    with inter_cols_pace:
-                                                        st.header("Variance Line Graph")
-
                                                     col1, col2, col3 = st.columns([1,1,1])
                                                     with col1:
                                                         if len(choice_img) >= 1:
@@ -2408,11 +2316,6 @@ if main_choice == "Simulation":
                                                             var_total9 = var_total
 
                                                 with st.expander("Root Mean Square Line Graph"):
-
-                                                    col1, inter_cols_pace, col2 = st.columns((2, 8, 2))
-
-                                                    with inter_cols_pace:
-                                                        st.header("Root Mean Square Line Graph")
 
                                                     col1, col2, col3 = st.columns([1,1,1])
                                                     with col1:
@@ -2451,10 +2354,6 @@ if main_choice == "Simulation":
                                                 with tab2:
 
                                                     with st.expander("Summary Table"):
-                                                        col1, inter_cols_pace, col2 = st.columns((2, 2, 2))
-
-                                                        with inter_cols_pace:
-                                                            st.header("Summary Table")
 
                                                         col1, col2, col3 = st.columns([1,1,1])
                                                         with col1:
@@ -2586,7 +2485,7 @@ if main_choice == "Simulation":
 
                                                                 if on6:
 
-                                                                    if len(choice_img) == 9:
+                                                                    if len(choice_img) >= 9:
                                                                         table_row = [message1,message4,message7,message2,message5,message8,message3,message6,message9]
                                                                         table_mean = [avg_total1,avg_total4,avg_total7,avg_total2,avg_total5,avg_total8,avg_total3,avg_total6,avg_total9]
                                                                         table_std = [std_total1,std_total4,std_total7,std_total2,std_total5,std_total8,std_total3,std_total6,std_total9]
@@ -2735,5 +2634,26 @@ if main_choice == "Simulation":
 
                                                         st.warning("After summary table, for graph, click on 'Graph' button and switch to 'Graph' tab.")
 
-if main_choice == "Feedback":
-    pass
+if main_choice == "Contributors":
+    st.title("Contributors")
+    st.divider()
+    with st.expander("Subject Matter Expert"):
+        st.markdown("- **Prof. R.S. Anand**")
+        st.markdown("- **Prof. Nishant Jain**")
+
+    with st.expander("Lab Developers"):
+        st.markdown("- **Rajeev Kumar**")
+        st.markdown("- **Nipun Jain**")
+        st.markdown("- **Lalita Gupta**")
+
+if main_choice == "References":
+    st.title("References")
+    st.divider()
+    with st.expander("Books"):
+        st.markdown("- **'Digital Image Processing' by González and Woods**")
+        st.markdown("- **'Computer Vision: Algorithms and Applications' by Richard Szeliski**")
+        st.markdown("- **'Hands-On Image Processing with Python' by Sandipan Dey**")
+
+    with st.expander("Journals"):
+        st.markdown("- **Paper: 'GrabCut': interactive foreground extraction using iterated graph cuts. Authors: Carsten Rother, Vladimir Kolmogorov, and Andrew Blake. Journal: ACM Transactions on Graphics (TOG), 2004.**")
+        st.markdown("- **'Image Enhancement by Histogram Transformation' by Albert G. Agouris and Theodore A. Agouris (1979)**")
