@@ -793,7 +793,7 @@ if main_choice == "Simulation":
     with tab1:
 
         if len(choice_img) == 0:
-            st.warning('Select images in sidebar.')
+            st.warning('Select images in sidebar. You can select maximum of 9 images.')
 
         if len(choice_img) >= 10:
             st.warning('You have selected more than 9 images. Simulation will work on first 9 images only.', icon="⚠️")
