@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st 
 
 with st.sidebar:
-    main_choice = st.selectbox("Image Processing Operations", ["Aim", "Theory", "Simulation", "Contributors", "References"])
+    main_choice = st.selectbox("Image Processing Operations", ["Aim", "Theory", "Simulation", "References"])
 
 if main_choice == "Aim":
     st.title("Aim")
@@ -2644,17 +2644,17 @@ if main_choice == "Simulation":
                                                     if on7:
                                                         st.warning("For graph, switch to 'Graph' tab.")
 
-if main_choice == "Contributors":
-    st.title("Contributors")
-    st.divider()
-    with st.expander("Subject Matter Expert"):
-        st.markdown("- **Prof. R.S. Anand**")
-        st.markdown("- **Prof. Nishant Jain**")
+# if main_choice == "Contributors":
+#     st.title("Contributors")
+#     st.divider()
+#     with st.expander("Subject Matter Expert"):
+#         st.markdown("- **Prof. R.S. Anand**")
+#         st.markdown("- **Prof. Nishant Jain**")
 
-    with st.expander("Lab Developers"):
-        st.markdown("- **Rajeev Kumar**")
-        st.markdown("- **Nipun Jain**")
-        st.markdown("- **Lalita Gupta**")
+#     with st.expander("Lab Developers"):
+#         st.markdown("- **Rajeev Kumar**")
+#         st.markdown("- **Nipun Jain**")
+#         st.markdown("- **Lalita Gupta**")
 
 if main_choice == "References":
     st.title("References")
