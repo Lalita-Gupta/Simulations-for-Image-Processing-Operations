@@ -698,7 +698,7 @@ if main_choice == "Simulation":
     # Sidebar
     with st.sidebar:
         # choice_img = st.selectbox("Image Set", ["Select one", "Set1", "Set2", "Set3", "Set4", "Set5", "Set6"])
-        choice_img = st.file_uploader("Input Images: MAX 9 IMAGES", type= ['bmp','webp','jpg','jpeg','png'], accept_multiple_files=True)
+        choice_img = st.file_uploader("Input Images: MAX 9 IMAGES", type= ['bmp','webp','avif','jpg','jpeg','png'], accept_multiple_files=True)
 
         if len(choice_img) >= 1:
             on5 = st.toggle('Original Image Histogram')
